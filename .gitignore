@@ -1,0 +1,10 @@
+*.log
+*.pyc
+.vscode
+.venv
+.virtualenv
+.python-version
+__pycache__
+duck_simulator.egg-info
+.mypy_cache
+build

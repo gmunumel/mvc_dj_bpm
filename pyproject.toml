@@ -58,3 +58,7 @@ testpaths = [
 
 [tool.mypy]
 check_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = ["broad-exception-caught", "missing-module-docstring", "missing-class-docstring", "missing-function-docstring"]

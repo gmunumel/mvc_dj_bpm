@@ -77,7 +77,8 @@ class DJView(BeatObserver, BPMObserver):
         self.bpm_output_label.pack()
 
     def update_beat(self):
-        pass
+        bpm: int = self.model.get_bpm()
+        self.progress.set(bpm)
 
     def update_bpm(self):
         bpm: int = self.model.get_bpm()
@@ -85,7 +86,6 @@ class DJView(BeatObserver, BPMObserver):
             self.bpm_output_label.config(text="Offine")
         else:
             self.bpm_output_label.config(text=f"Current BPM: {bpm}")
-            # self.beat_bar.step(bpm)
             self.progress.set(bpm)
 
     def enable_start_menu_item(self):
